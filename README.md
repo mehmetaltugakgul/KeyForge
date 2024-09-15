@@ -2,7 +2,7 @@
 
 KeyForge is a desktop application designed to create strong and customizable passwords.
 
-<img width="355" alt="image" src="https://github.com/user-attachments/assets/e43d7f76-48d6-4448-afbc-883d05146ac0">
+<img width="338" alt="image" src="https://github.com/user-attachments/assets/06034e05-5058-47f1-89a9-7b7581ed09ae">
 
 
 ## Features
