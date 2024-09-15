@@ -2,6 +2,10 @@
 
 KeyForge is a desktop application designed to create strong and customizable passwords.
 
+<img width="338" alt="image" src="https://github.com/user-attachments/assets/06034e05-5058-47f1-89a9-7b7581ed09ae">
+
+You can download and install the dmg file => https://github.com/mehmetaltugakgul/KeyForge/blob/main/KeyForge.dmg
+
 ## Features
 
 - Adjustable password length (4-128 characters)
@@ -9,7 +13,6 @@ KeyForge is a desktop application designed to create strong and customizable pas
 - Option to include at least one of each selected character type
 - Password strength indicator
 - Copy generated password to clipboard
-- System tray support
 
 ## Installation
 
@@ -41,10 +44,6 @@ KeyForge is a desktop application designed to create strong and customizable pas
 5. Click the "Generate Password" button to create your password.
 6. View the generated password and check its strength.
 7. Use the "Copy Password" button to copy the password to your clipboard.
-
-## Building
-
-To build the application for your current platform:
 
 ## Contributing
 
