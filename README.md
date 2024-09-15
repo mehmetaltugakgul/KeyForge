@@ -45,10 +45,6 @@ You can download and install the dmg file => https://github.com/mehmetaltugakgul
 6. View the generated password and check its strength.
 7. Use the "Copy Password" button to copy the password to your clipboard.
 
-## Building
-
-To build the application for your current platform:
-
 ## Contributing
 
 If you'd like to contribute to the project, please fork the repository and create a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
