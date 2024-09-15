@@ -12,7 +12,6 @@ KeyForge is a desktop application designed to create strong and customizable pas
 - Option to include at least one of each selected character type
 - Password strength indicator
 - Copy generated password to clipboard
-- System tray support
 
 ## Installation
 
