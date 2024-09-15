@@ -4,6 +4,7 @@ KeyForge is a desktop application designed to create strong and customizable pas
 
 <img width="338" alt="image" src="https://github.com/user-attachments/assets/06034e05-5058-47f1-89a9-7b7581ed09ae">
 
+You can download and install the dmg file => https://github.com/mehmetaltugakgul/KeyForge/blob/main/KeyForge.dmg
 
 ## Features
 
