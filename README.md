@@ -2,7 +2,7 @@
 
 KeyForge is a desktop application designed to create strong and customizable passwords.
 
-<img width="470" alt="KeyForge" src="https://github.com/user-attachments/assets/095349e7-5206-4a90-88b9-3dc6dbe82de9">
+<img width="470" alt="KeyForgeSS" src="https://github.com/user-attachments/assets/6499f489-a1f5-4bac-b51d-62ab05622cb1">
 
 
 You can download and install the dmg file => https://github.com/mehmetaltugakgul/KeyForge/blob/main/KeyForge.dmg
