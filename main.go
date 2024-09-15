@@ -4,9 +4,7 @@ import (
 	"fmt"
 	"math/rand"
 	"unicode"
-
 	"time"
-
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 	"fyne.io/fyne/v2/container"
@@ -20,6 +18,7 @@ var (
 	includeLowercase    bool = true
 	includeNumbers      bool = true
 	includeSpecialChars bool = true
+	excludeAmbiguous    bool = false 
 	passwordLength      int  = 12
 	minOneOfEach        bool = false
 	generateButton      *widget.Button
@@ -39,7 +38,7 @@ func updateGenerateButtonState(generateButton *widget.Button) {
 	}
 }
 
-func generatePassword(length int, uppercase, lowercase, numbers, specialChars, minOneOfEach bool) string {
+func generatePassword(length int, uppercase, lowercase, numbers, specialChars, minOneOfEach, excludeAmbiguous bool) string {
 	if !uppercase && !lowercase && !numbers && !specialChars {
 		return ""
 	}
@@ -48,6 +47,13 @@ func generatePassword(length int, uppercase, lowercase, numbers, specialChars, m
 	lowercasePool := "abcdefghijklmnopqrstuvwxyz"
 	numbersPool := "0123456789"
 	specialPool := "!@#$%^&*()-_+="
+
+	if excludeAmbiguous {
+		uppercasePool = "ABCDEFGHJKLMNPQRSTUVWXYZ"
+		lowercasePool = "abcdefghijkmnpqrstuvwxyz"
+		numbersPool = "23456789"
+		specialPool = "!@#$%^&*()-_+"
+	}
 
 	characterSet := ""
 	if uppercase {
@@ -281,7 +287,7 @@ func main() {
 
 
 	generateButton = widget.NewButton("Generate Password", func() {
-		password := generatePassword(passwordLength, includeUppercase, includeLowercase, includeNumbers, includeSpecialChars, minOneOfEach)
+		password := generatePassword(passwordLength, includeUppercase, includeLowercase, includeNumbers, includeSpecialChars, minOneOfEach, excludeAmbiguous)
 		passwordOutput.SetText(password)
 		
 		strength := calculatePasswordStrength(password)
@@ -304,6 +310,10 @@ func main() {
 	})
 
 
+	excludeAmbiguousCheck := widget.NewCheck("Exclude Ambiguous Characters", func(checked bool) {
+		excludeAmbiguous = checked
+	})
+
 	content := container.NewVBox(
 		lengthLabel,
 		lengthSlider,
@@ -312,6 +322,7 @@ func main() {
 		numbersCheck,
 		specialCharsCheck,
 		minOneOfEachCheck,
+		excludeAmbiguousCheck,
 		generateButton,
 		widget.NewLabel("Generated Password:"),
 		passwordOutput,
