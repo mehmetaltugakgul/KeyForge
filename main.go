@@ -205,7 +205,8 @@ func main() {
 
 	clipboard := myWindow.Clipboard()
 
-	icon, err := fyne.LoadResourceFromPath("/Users/mehmetaltugakgul/Desktop/password/passwd.png")
+	icon, err := fyne.LoadResourceFromPath("passwd.png")
+	
 	if err != nil {
 		fmt.Println("Error loading icon:", err)
 	}
